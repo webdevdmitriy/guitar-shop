@@ -5,9 +5,9 @@ class Products {
   idProduct = ''
 
   handlerBtn = e => {
-    console.log('this.idProduct: ', this.idProduct)
     const { products, addProduct } = localStorageUtil.putProduct(this.idProduct)
-    console.log(e.currentTarget)
+
+    console.log('addProduct: ', addProduct)
     if (addProduct) {
       e.currentTarget.textContent = this.textBtnRemove
       e.currentTarget.classList.add(this.classBtnActive)
@@ -15,6 +15,8 @@ class Products {
       e.currentTarget.textContent = this.textBtnAdd
       e.currentTarget.classList.remove(this.classBtnActive)
     }
+
+    header.render(products.length)
   }
 
   render() {

@@ -27,5 +27,3 @@ class LocalStorageUtil {
 }
 
 const localStorageUtil = new LocalStorageUtil()
-// const products = localStorageUtil.getProducts()
-// console.log('products: ', products)
